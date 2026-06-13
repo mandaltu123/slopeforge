@@ -1,5 +1,12 @@
 # SlopeForge
 
+![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange?logo=scikitlearn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-regression-green)
+![FastAPI](https://img.shields.io/badge/FastAPI-green?logo=fastapi&logoColor=white)
+![Typer](https://img.shields.io/badge/Typer-CLI-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 **End-to-end ML regression pipeline with a model leaderboard and FastAPI inference endpoint.** Train multiple regression models on tabular data, compare them on a leaderboard, and serve predictions via REST API or CLI — all in one tool.
 
 ## What It Does
@@ -87,3 +94,7 @@ SlopeForge-House-Price-Regression-Lab/
 │   └── requirements.txt
 └── README.md
 ```
+
+## License
+
+MIT — see [LICENSE](LICENSE)
