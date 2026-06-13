@@ -67,6 +67,24 @@ curl -X POST "http://127.0.0.1:8000/predict" \
 
 See `docs/concepts.md` for a detailed explanation of the ML flow and concepts.
 
+## AI/ML Summary (Client-Ready)
+
+SlopeForge is an end-to-end machine learning pipeline for predicting house sale prices
+from tabular data. It automates EDA, preprocessing, model training, evaluation, and
+serving so a trained model can be deployed quickly via a minimal API.
+
+| Area | What We Did | Libraries / APIs |
+| --- | --- | --- |
+| Data Ingestion | Load CSV, drop `Id`, separate features/target | pandas |
+| EDA | Generate HTML + JSON summary (shape, dtypes, missing, correlations) | pandas |
+| Preprocessing | Auto-detect numeric vs categorical; impute + scale/encode | scikit-learn (`ColumnTransformer`, `SimpleImputer`, `StandardScaler`, `OneHotEncoder`) |
+| Modeling | Train multiple regressors (Dummy, Ridge, RF, HGB, optional XGBoost) | scikit-learn, optional `xgboost` |
+| Evaluation | Compute MAE/RMSE/R2; persist run metrics | scikit-learn |
+| Model Selection | Compare runs; leaderboard sorted by RMSE then MAE | pandas |
+| Export | Export best pipeline + metadata JSON | joblib |
+| Serving | FastAPI `/predict` for single/batch JSON; `/health` | FastAPI, Uvicorn |
+| CLI Orchestration | EDA/train/compare/export/serve via CLI | Typer |
+
 ## Troubleshooting
 
 - Optional XGBoost: if `xgboost` is not installed, `xgb` will fall back to `HistGradientBoostingRegressor`.

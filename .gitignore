@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+
+# Env / secrets
+.env
+*.env
+.env.local
+.env.production
+
+# ML artifacts
+*.joblib
+*.pkl
+*.h5
+*.pt
+*.pth
+artifacts/
+models/
+
+# Vector DB
+chroma_data/
+storage/chroma/
+*.faiss
+*.bin
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
